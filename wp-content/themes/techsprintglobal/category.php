@@ -26,6 +26,35 @@ get_header();
 				<p>Latest updates, insights & articles</p>
 			</header>
 
+			<!-- Blog Categories Filter -->
+			<div class="blog-categories-filter">
+				<h3>Filter by Blog</h3>
+				<ul class="filter-list">
+					<li class="filter-item <?php echo (is_home() && !is_category()) ? 'active' : ''; ?>">
+						<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">All Posts</a>
+					</li>
+					<?php
+					$categories = get_categories(array(
+						'orderby' => 'name',
+						'order' => 'ASC'
+					));
+
+					foreach ($categories as $category) {
+						$category_link = get_term_link($category);
+						$category_count = $category->count;
+						$is_active = is_category($category->term_id);
+						?>
+						<li class="filter-item <?php echo $is_active ? 'active' : ''; ?>">
+							<a href="<?php echo esc_url($category_link); ?>">
+								<?php echo esc_html($category->name); ?> (<?php echo $category_count; ?>)
+							</a>
+						</li>
+						<?php
+					}
+					?>
+				</ul>
+			</div>
+
 			<?php if (have_posts()): ?>
 
 				<div class="blog-grid site-container">
@@ -51,12 +80,12 @@ get_header();
 								</h2>
 
 								<p class="blog-excerpt">
-									<?php 
+									<?php
 									// If manual excerpt exists, use it; otherwise trim content
-									if ( has_excerpt() ) {
+									if (has_excerpt()) {
 										echo get_the_excerpt();
 									} else {
-										echo wp_trim_words( get_the_content(), 20, '...' );
+										echo wp_trim_words(get_the_content(), 20, '...');
 									}
 									?>
 								</p>
@@ -72,7 +101,7 @@ get_header();
 						</article>
 
 					<?php endwhile; ?>
-				    <?php echo wp_pagenavi();?>
+					<?php echo wp_pagenavi(); ?>
 
 				</div>
 

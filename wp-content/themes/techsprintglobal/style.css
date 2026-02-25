@@ -8,3 +8,444 @@ Text Domain: techsprintglobal
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 */
+
+/* Home Page Styles */
+.home-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 0;
+}
+
+.page-hero .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.page-hero .page-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Posts Section */
+.posts-section {
+    margin-bottom: 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Ensure both sections have identical header styling */
+.blog-section .section-header,
+.case-studies-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-section .section-title,
+.case-studies-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Category Filter */
+.category-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.category-filter-item {
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.category-filter-item:hover {
+    background: #e9e9e9;
+    color: #333;
+}
+
+.category-filter-item.active {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+/* Ensure both sections have identical filter styling */
+.blog-section .category-filter,
+.case-studies-section .category-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blog-section .category-filter-item,
+.case-studies-section .category-filter-item {
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.blog-section .category-filter-item:hover,
+.case-studies-section .category-filter-item:hover {
+    background: #e9e9e9;
+    color: #333;
+}
+
+.blog-section .category-filter-item.active,
+.case-studies-section .category-filter-item.active {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Ensure both sections have identical grid styling */
+.blog-grid,
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Post Card - Base Styles */
+.post-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure both blog and case study cards have identical styling */
+.blog-card,
+.case-study-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover,
+.case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.post-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover .post-card-image img {
+    transform: scale(1.05);
+}
+
+.post-card-content {
+    padding: 25px;
+}
+
+.post-card-category {
+    margin-bottom: 15px;
+}
+
+.post-card-category a {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.post-card-category a:hover {
+    background: #005a87;
+}
+
+.post-card-title {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.post-card-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card-title a:hover {
+    color: #0073aa;
+}
+
+.post-card-excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.post-card-meta {
+    margin-bottom: 20px;
+}
+
+.post-date {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.post-card-read-more {
+    display: inline-block;
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.post-card-read-more:hover {
+    color: #005a87;
+}
+
+/* No Posts */
+.no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.no-posts p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+}
+
+/* Ensure both sections have identical pagination styling */
+.blog-pagination,
+.case-studies-pagination {
+    margin-top: 40px;
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-list {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-item {
+    display: flex;
+}
+
+.pagination-item a,
+.pagination-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    background: white;
+    border: 1px solid #ddd;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.pagination-item a:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.pagination-item .current {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+.pagination-item .dots {
+    border: none;
+    background: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .home-page-container {
+        padding: 0 15px;
+    }
+    
+    .page-hero {
+        margin-bottom: 40px;
+        padding: 40px 0;
+    }
+    
+    .page-hero .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-hero .page-content {
+        font-size: 1.1rem;
+    }
+    
+    .section-header,
+    .blog-section .section-header,
+    .case-studies-section .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .section-title,
+    .blog-section .section-title,
+    .case-studies-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .category-filter,
+    .blog-section .category-filter,
+    .case-studies-section .category-filter {
+        gap: 8px;
+    }
+    
+    .category-filter-item,
+    .blog-section .category-filter-item,
+    .case-studies-section .category-filter-item {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .posts-grid,
+    .blog-grid,
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .post-card-content {
+        padding: 20px;
+    }
+    
+    .post-card-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-hero .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title,
+    .blog-section .section-title,
+    .case-studies-section .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .category-filter-item,
+    .blog-section .category-filter-item,
+    .case-studies-section .category-filter-item {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .post-card-image {
+        height: 180px;
+    }
+    
+    .post-card-content {
+        padding: 15px;
+    }
+    
+    .post-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .pagination-list {
+        gap: 3px;
+    }
+    
+    .pagination-item a,
+    .pagination-item span {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+        padding: 0 8px;
+    }
+}
