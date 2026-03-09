@@ -1,0 +1,34 @@
+/*
+ Theme Name:   Startup Consultant Child
+ Theme URI:    https://example.com/startup-consultant-child/
+ Description:  A child theme for the Startup Consultant theme
+ Author:       Your Name
+ Author URI:   https://example.com
+ Template:     startup-consultant
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  startup-consultant-child
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/* Add your custom CSS below this line */
+
+/* Example customizations */
+body {
+    /* Custom body styles can go here */
+}
+
+.site-header {
+    /* Custom header styles can go here */
+}
+
+.site-content {
+    /* Custom content styles can go here */
+}
+
+.site-footer {
+    /* Custom footer styles can go here */
+}
