@@ -1,0 +1,515 @@
+/*
+Theme Name: Startup Consultant
+Theme URI: https://www.themescarts.com/products/startup-consultant/
+Author: Themes Carts
+Author URI: https://www.themescarts.com/
+Description: A Startup Consultant plays a vital role in shaping new and growing ventures by offering strategic guidance across Business, Finance, and Corporate development. Acting as a bridge between vision and execution, a startup consultant often collaborates with a Creative Agency, PR Agency, Advertising Firm, and IT Consulting Firm to ensure a strong market presence and scalable growth. Their expertise spans Financial Services, branding, operations, and technology, making them an essential partner for modern startups. From a design and presentation perspective, a Startup Consultant’s digital presence should reflect a modern, minimal, and elegant approach. A clean, sophisticated, and luxurious layout builds trust with investors and clients alike. With retina ready, responsive, and mobile friendly design, the platform ensures a seamless experience across devices. The interface remains user-friendly, interactive, and beautiful, enhanced with animated elements and stunning visuals to engage users effectively. Built with bootstrap, optimized codes, and clean code, the website delivers a faster page load time while maintaining secure and clean code standards. As a multipurpose and agency friendly solution, Startup Consultant suits a Corporate Agency, Financial Agency, or IT Consulting Firm equally well. Developers benefit from flexible shortcodes, extensive Customization Options, and advanced personalization options to tailor the site to specific consulting needs. Key sections such as a bold Banner, professional Team showcase, impactful testimonial section, and clear Call to Action Button (CTA) help convert visitors into clients. Integrated social media features strengthen brand reach, while translation ready functionality supports global expansion. Overall, a Startup Consultant embodies innovation, strategy, and professionalism—delivering a clean, modern, and multipurpose consulting experience designed for today’s competitive corporate landscape.
+Version: 1.1.3
+License: GNU General Public License version 2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: startup-consultant
+Requires PHP: 5.6
+Tested up to: 6.9
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, block-patterns, block-styles, editor-style, wide-blocks, template-editing, style-variations, grid-layout, full-width-template, footer-widgets, featured-images, full-site-editing, featured-image-header, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, post-formats, sticky-post, threaded-comments, translation-ready, theme-options, rtl-language-support, education, blog, portfolio
+
+Startup Consultant WordPress Theme has been created by ThemesCarts(themescarts.com), 2025.
+Startup Consultant WordPress Theme is released under the terms of GNU GPL
+*/
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25ch;
+}
+
+a:hover,
+a:focus {
+	text-decoration-style: dashed;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--foreground);
+	font-size: var(--wp--preset--font-size--medium);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+body.home .wp-site-blocks > * + *{
+	margin-block-start:0 !important;
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.90;
+}
+
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Twenty Twenty-Two. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
+}
+
+body.home .wp-block-cover{ margin-block-start:0 !important; }
+nav.Hdr-menu.wp-block-navigation ul{ font-weight:600 !important;}
+
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+.headright-part{ text-align:right;}
+body.home header.wp-block-template-part{ position: relative; width:100%; z-index:999;}
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--custom--spacing--outer);
+	padding-bottom: var(--wp--custom--spacing--large);
+	padding-right: var(--wp--custom--spacing--outer);
+	padding-left: var(--wp--custom--spacing--outer);
+}
+.wp-block-navigation ul li.current-menu-item > a,
+.wp-block-navigation ul li a:hover{ color:var(--wp--preset--color--primary) !important;}
+
+/* = Contact Form 7 CSS
+----------------------------------------------- */
+.wpcf7{ 
+	margin:30px 0 0;
+	padding:0;
+}
+.wpcf7 input[type="text"], 
+.wpcf7 input[type="tel"], 
+.wpcf7 input[type="email"]{ 
+	width:40%;
+	border:1px solid #cccccc;
+	box-shadow:inset 1px 1px 2px #ccc;
+	color:#797979;
+	margin-bottom:0;
+	height:40px;
+	padding:0 15px;
+}
+.wpcf7 textarea{	
+	border:1px solid #cccccc;
+	box-shadow:inset 1px 1px 2px #ccc;
+	color:#797979;
+	margin-bottom:25px;
+	padding:10px;
+	width:60%;
+	height:160px;
+	font-size:12px;
+}
+.wpcf7 input[type="submit"]{
+	background-color:#efc62c;
+	padding:20px 40px;
+	border-radius:40px;
+	font-weight:600;
+	font-size:16px;
+	cursor:pointer;
+	color:#ffffff;	
+	width:auto;
+	border:none;
+	text-transform:uppercase;
+}
+.wpcf7 input[type="submit"]:hover{
+	background-color:#101010;
+}
+
+.search-box {
+	position: relative;
+}
+.search-box .wp-block-search__input {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 60px;
+}
+.search-box .wp-block-search__button {
+    background: transparent !important;
+    padding: 0;
+}
+
+/* Header */
+.main-header .topbar .top-mail-box a, .main-header .topbar .top-phone-box a{
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+.main-header .topbar .social-icons a{
+	font-size: 22px;
+}
+.main-header .menu-header .menu-box .wp-block-navigation .wp-block-navigation-item a:hover{
+	color: var(--wp--preset--color--background) !important;
+	text-decoration: none;
+}
+.ourprocess-section .process-box .dashicons, .main-header .menu-header .header-btn-box .header-btn a, .main-slider .slider-left-box .slider-btns a, .ourprocess-section .process-box, .about-section .about-btm-box .about-btn a{
+	transition: 1.2s;
+}
+.main-header .menu-header .header-btn-box .header-btn a:hover{
+	background-color: var(--wp--preset--color--background) !important;
+}
+.about-section .about-btm-box .about-btn a:hover, .main-slider .slider-left-box .slider-btns a:hover{
+	background-color: var(--wp--preset--color--primary) !important;
+}
+.main-slider .slider-left-box .slider-btns a:hover{
+	border-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--foreground) !important;
+}
+
+/* Slider */
+.main-slider .slider-bg{
+	padding: 0;
+	position: relative;
+}
+.main-slider .slider-bg .slider-btm-left, .main-slider .slider-bg .slider-btm-right{
+	position: absolute;
+	bottom: 0;
+}
+.main-slider .slider-bg .slider-btm-left{
+	left: 0;
+} 
+.main-slider .slider-bg .slider-btm-right{
+	right: 0;
+}
+.main-slider .slider-bg .owl-nav{
+	margin-top: 0;
+	position: absolute;
+	left: -8%;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main-slider .slider-bg .owl-nav button{
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--foreground) !important;
+	height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.main-slider .slider-bg .owl-nav button:hover{
+	background-color: var(--wp--preset--color--background) !important;
+}
+
+/* About Section */
+.about-section .about-right-box .about-list li{
+	list-style: none;
+	display: flex;
+    align-items: center;
+    gap: 12px
+}
+.about-section .about-right-box .about-list li span{
+	color: var(--wp--preset--color--background);
+}
+.about-section .about-left-box, .about-section .about-left-box .about-image1{
+	position: relative;
+}
+.about-section .about-left-box .about-image2{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.about-section .about-btm-left .about-profile-img img{
+	height: 50px;
+	width: 50px;
+}
+.about-section .about-left-box .about-image1{
+	height: 100%;
+}
+.about-section .about-left-box .about-image1 img{
+	width: 80% !important;
+	height: 75%;
+	object-fit: cover;
+}
+.about-section .about-left-box .about-image2{
+	width: 50% !important;
+	height: 55%;
+}
+.about-section .about-left-box .about-image2 img{
+	width: 100% !important;
+	height: 100%;
+	object-fit: cover;
+}
+.about-section .about-left-box .about-image1:after{
+	content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: var(--wp--preset--color--background);
+    bottom: 15%;
+    left: 46%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Our Process Section */
+.ourprocess-section .ourprocess-head-box .process-sub-title, .site-blog-box .blog-head-box .blog-sub-title{
+	position: relative;
+	width: fit-content;
+    margin: 0 auto;
+}
+.ourprocess-section .ourprocess-head-box .process-sub-title:after, .site-blog-box .blog-head-box .blog-sub-title:after{
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 50%;
+	background-color: var(--wp--preset--color--background);
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ourprocess-section .process-box span.dashicons{
+	background-color: var(--wp--preset--color--background);
+	margin: 0 auto;
+    display: flex;
+    height: 65px;
+    width: 65px;
+    font-size: 35px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.ourprocess-section .process-box:hover{
+	background-color: var(--wp--preset--color--background) !important;
+}
+.ourprocess-section .process-box:hover .process-title, .ourprocess-section .process-box:hover .process-desc{
+	color: var(--wp--preset--color--foreground) !important;
+}
+.ourprocess-section .process-box:hover .dashicons{
+	background-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--background);
+	transform: rotateY(360deg);
+}
+.footer-div a{
+	text-decoration: none;
+}
+.post-page-area .wp-block-post{
+	padding: 30px;
+	box-shadow: 12px 12px 50px rgba(0, 0, 0, 0.4);
+	margin-bottom: 30px;
+}
+.sidebar-area-wrap .taxonomy-post_tag a {
+    background: var(--wp--preset--color--primary);
+    padding: 5px !important;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #fff !important;
+    margin-right: 10px;
+}
+.sidebar-area-wrap .taxonomy-post_tag span{
+	display: none;
+}
+.read-more-btn a.wp-block-post-excerpt__more-link {
+    background: var(--wp--preset--color--primary);
+    border-color: currentColor;
+    color: var(--wp--preset--color--white);
+    font-weight: 700;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+.woocommerce-account .wp-block-post-title, .woocommerce-account main .woocommerce, .woocommerce-cart .wp-block-post-title, .woocommerce-cart main .woocommerce, .woocommerce-checkout .wp-block-post-title, .woocommerce-checkout main .woocommerce {
+    max-width: 100%;
+}
+pre {
+    background: #eee;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+
+/*comment*/
+.wp-block-comments{
+    padding: 20px;
+    border: 1px solid #dfdfdf;
+}
+.wp-block-comment-template li .wp-block-columns{
+    border: 1px solid #dfdfdf;
+    padding: 20px;
+}
+.wp-block-avatar img{
+    border: 1px solid #dfdfdf;
+    padding: 2px;
+}
+.wp-block-post-comments-form textarea{
+    background: #f8f8f8;
+}
+.entry-content{
+	overflow-wrap: anywhere;
+	overflow: hidden;
+}
+
+.buy-now-button{
+	padding: 5px 10px !important;
+	color: #fff !important;
+	border-radius: 7px !important;
+	background: var(--wp--preset--color--background) !important;
+}
+.buy-now-button:hover{
+	background: #000 !important;
+}
+
+a.added_to_cart.wc-forward {
+    background-color: #32373c;
+    color: #fff;
+    padding-top: calc(0.667em + 2px);
+    padding-right: calc(1.333em + 2px);
+    padding-bottom: calc(0.667em + 2px);
+    padding-left: calc(1.333em + 2px);
+}
+
+/*  Account Page CSS */
+.woocommerce-account h2 {
+	font-weight: 500;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li,.woocommerce-account .addresses .title .edit {
+	background: var(--wp--preset--color--background);
+	margin-bottom: 10px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+	background-color: transparent !important;
+}
+.woocommerce-MyAccount-navigation ul li a,.woocommerce-account .addresses .title .edit {
+	padding: 8px 12px !important;
+	font-size: 16px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	margin: 0 !important;
+}
+.woocommerce-account .addresses .title .edit{
+	color: #fff !important;
+	text-decoration: none;
+}
+nav.woocommerce-MyAccount-navigation ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+}
+.woocommerce-account .addresses .title .edit {
+    float: left;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+	list-style: none;
+	border-bottom: 1px solid #eaeaea;
+	position: relative;
+	padding: 0;
+}
+.woocommerce-MyAccount-navigation ul li a {
+	padding: 15px 0;
+	display: block;
+	text-decoration: none;
+}
+.woocommerce-MyAccount-navigation ul li:last-child {
+	border: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	margin: 2rem;
+	padding: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+	text-decoration: none;
+}
+.meta-category a{
+	color: #fff !important;
+	text-decoration: none !important;
+}
+.post-navigation-link-previous a,
+.post-navigation-link-next a {
+	color: #fff !important;
+	text-decoration: none;
+}
+.post-navigation-link-previous ,
+.post-navigation-link-next {
+  background: var(--wp--preset--color--background) !important;
+  color: var(--wp--preset--color--secondary);
+  padding: 7px 20px;
+  border-radius: 5px;
+}
+.post-pgntion{
+	margin-top: 40px;
+}
